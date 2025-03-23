@@ -8,11 +8,12 @@ body {
 h1 {
     color: #333;
     text-align: center;
+    margin-top: 40px;
 }
 
 form {
     max-width: 100%;
-    width: 100%;
+    width: 90%; /* Réduit la taille du formulaire */
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -39,6 +40,8 @@ input[type="submit"] {
     background-color: #22427C;
     color: #fff;
     cursor: pointer;
+    width: 100%;
+    padding: 12px;
 }
 
 input[type="submit"]:hover {
@@ -49,9 +52,9 @@ header {
     padding: 20px 10px;
     background-color: #ffffff;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .image-container {
@@ -87,31 +90,31 @@ a:hover {
     color: White;
     text-align: center;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .lol {
     background-color: #2b2b2b;
     position: relative;
+    padding: 20px 0;
 }
 
 footer {
     background-color: #4b4f5a;
-    padding: 0px 0;
+    padding: 20px 0;
     text-align: center;
-    padding-top: 30px;
 }
 
 .footer-column {
     display: inline-block;
     width: 30%;
     vertical-align: top;
-    margin: 0 10px;
+    margin: 10px;
     box-sizing: border-box;
 }
 
 .footer-column h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: White;
     text-decoration: Underline;
@@ -131,7 +134,7 @@ footer {
     text-decoration: none;
     color: #ffffff;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .footer-column ul li a:hover {
@@ -161,7 +164,13 @@ footer {
         margin: 5px 8px;
     }
 
-    /* Rendre le formulaire plus petit et responsive */
+    /* Réduction de la taille de l'image */
+    img.atia {
+        max-width: 80%; /* Image plus petite */
+        height: auto;
+    }
+
+    /* Formulaire ajusté */
     form {
         width: 90%;
         padding: 15px;
@@ -173,7 +182,12 @@ footer {
         margin-bottom: 20px;
     }
 
-    img.atia {
-        max-width: 100%;
+    /* Réduire la taille des liens du footer */
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .ftxt {
+        font-size: 16px;
     }
 }
