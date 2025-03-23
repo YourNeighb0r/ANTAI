@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
-    padding: 0px;
+    padding: 0;
 }
 
 h1 {
@@ -12,7 +12,8 @@ h1 {
 }
 
 form {
-    max-width: 400px;
+    max-width: 100%;
+    width: 100%;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -45,85 +46,54 @@ input[type="submit"]:hover {
     background-color: #22427C;
 }
 
-p {
-
-}
-
 header {
-    padding: 24px 0; /* Marge verticale */
-    background-color: #ffffff; /* Couleur de fond */
-    display: flex; /* Utilisation de flexbox */
-    align-items: center; /* Alignement vertical au centre */
-    justify-content: space-between; /* Alignement horizontal avec espace entre les éléments */
+    padding: 24px 0; 
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .image-container {
-    margin-right: 20px; /* Marge à droite pour l'espace entre l'image et le texte */
+    margin-right: 20px;
 }
 
 img.atia {
-    width: 420px;
-    height: 130px;
-    margin-left: 390px;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
 }
 
 .text-container {
     text-align: right;
-    margin-right: 320px;
     word-spacing: 7px;
+    margin-right: 0;  /* Supprime la marge à droite */
 }
 
-.txtt{
-    font-family: Francois One;
-    font-weight: Medium;
+.txtt {
+    font-family: "Open Sans", sans-serif;
+    font-weight: medium;
     font-size: 18px;
     text-decoration: none;
     color: #2b2b2b;
-    font-family: "Open Sans", sans-serif;
 }
 
-a:hover{
-    color: #Black;
+a:hover {
+    color: #000;
     text-decoration: underline;
 }
 
-
-.ftxt{
+.ftxt {
     color: White;
     text-align: center;
     font-family: "Open Sans";
     font-size: 20px;
 }
 
-.h3{
-    color: White;
-    text-decoration: underline;
-    float: left;
-    margin-left: 780px;
-    font-size: 23px;
-}
-
-.h2{
-    color: White;
-    text-decoration: underline;
-    float: right;
-    margin-right: 780px;
-    font-size: 23px;
-}
-
-.lol{
+.lol {
     background-color: #2b2b2b;
     position: relative;
 }
-
-.po{
-    text-align: center;
-    margin-left: -300px;
-    color: White;
-    text-decoration: none;
-
-}
-
 
 footer {
     background-color: #4b4f5a;
@@ -131,16 +101,12 @@ footer {
     text-align: center;
 }
 
-.footer-container {
-    text-align: center;
-}
-
 .footer-column {
-    display: inline-block; /* Afficher les colonnes en ligne */
-    width: calc(40% / 3 - 0px); /* Calculer la largeur pour trois colonnes avec un espacement de 20px entre elles */
-    vertical-align: top; /* Aligner les colonnes au même niveau */
-    margin: 0 0px; /* Espacement entre les colonnes */
-    box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur */
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 10px;
+    box-sizing: border-box;
 }
 
 .footer-column h3 {
@@ -170,4 +136,42 @@ footer {
 .footer-column ul li a:hover {
     color: #666;
     text-decoration: underline;
+}
+
+/* Media Queries pour améliorer la responsivité */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .txtt {
+        font-size: 16px;
+    }
+
+    .image-container {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .text-container {
+        margin-right: 0;
+    }
+
+    form {
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    img.atia {
+        width: 100%;
+    }
 }
