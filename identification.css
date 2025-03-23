@@ -13,7 +13,7 @@ h1 {
 
 form {
     max-width: 100%;
-    width: 90%; /* Réduit la taille du formulaire */
+    width: 90%; /* Ajustement pour être plus fluide */
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -60,11 +60,14 @@ header {
 .image-container {
     flex: 1;
     text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
 }
 
 img.atia {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: auto; /* Utilise le rapport largeur/hauteur original de l'image */
+    max-width: 420px; /* Limite la taille de l'image */
 }
 
 .text-container {
@@ -142,8 +145,9 @@ footer {
     text-decoration: underline;
 }
 
+/* VERSION MOBILE */
 @media (max-width: 768px) {
-    /* Adaptation des éléments dans l'en-tête */
+    /* En-tête avec ajustement de l'image et texte */
     header {
         padding: 10px;
         flex-direction: column;
@@ -152,37 +156,35 @@ footer {
 
     .image-container {
         margin-bottom: 10px;
+        width: 80%;
+    }
+
+    img.atia {
+        width: 100%; /* Image s'ajuste à la taille de son conteneur */
+        max-width: 320px; /* Limiter la largeur à 320px sur mobile */
     }
 
     .text-container {
         text-align: center;
-        margin-bottom: 10px;
     }
 
     .txtt {
         font-size: 14px;
-        margin: 5px 8px;
+        margin: 5px;
     }
 
-    /* Réduction de la taille de l'image */
-    img.atia {
-        max-width: 80%; /* Image plus petite */
-        height: auto;
-    }
-
-    /* Formulaire ajusté */
+    /* Formulaire ajusté pour les petits écrans */
     form {
         width: 90%;
         padding: 15px;
     }
 
-    /* Pied de page : ajustement des colonnes */
+    /* Réduction de la taille des liens du footer et réorganisation des colonnes */
     .footer-column {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    /* Réduire la taille des liens du footer */
     .footer-column ul li a {
         font-size: 14px;
     }
